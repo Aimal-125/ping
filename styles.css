@@ -1,0 +1,165 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+.container {
+	min-height: 100vh;
+}
+.miniContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	padding: 1rem;
+}
+.hd {
+	padding: 3rem 0 1rem 0;
+	font-size: 25px;
+}
+.hd span {
+	background: hsl(223, 100%, 50%);
+	content: "";
+	width: 4px;
+	height: 4px;
+	display: inline-block;
+}
+.launch {
+	font-size: 25px;
+	padding-bottom: 1rem;
+	color: darkgray;
+}
+.launch span {
+	font-weight: bold;
+	color: black;
+}
+.sub {
+	padding-bottom: 1.5rem;
+	color: gray;
+	font-style: italic;
+}
+.sub span {
+	font-size: 16px;
+	padding: 7px;
+	border-radius: 30px;
+	background: red;
+	color: white;
+	font-weight: bold;
+	border: 2px outset yellow;
+}
+.ediv {
+	padding-bottom: 3rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	position: relative;
+	max-width: 100%;
+}
+.ep {
+	position: absolute;
+	bottom: 20px;
+	left: 10px;
+	font-size: 10px;
+	font-style: italic;
+	color: hsl(354, 100%, 66%);
+	visibility: hidden;
+}
+#btn {
+	width: 30%;
+	border: none;
+	border-radius: 30px;
+	padding: 10px;
+	background: hsl(223, 100%, 50%);
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px 2px black;
+	font-size: 18px;
+	box-shadow: 0px 5px 5px 0px hsl(223, 100%, 88%);
+	transition: 0.3s;
+	cursor: pointer;
+}
+#btn:hover {
+	background: hsl(223, 100%, 70%);
+	transition: 0.3s;
+}
+.ediv input {
+	width: 70%;
+	border-radius: 30px;
+	border: none;
+	padding: 10px;;
+	font-size: 18px;
+	color: darkgray;
+}
+.imgdiv {
+	max-width: 45%;
+}
+.imgdiv img {
+	display: block;
+	max-width: 100%;
+}
+.sdiv {
+	padding-top: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.sdiv span {
+	border: 1px solid lightgray;
+	clip-path: circle(50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color: hsl(223, 100%, 50%);
+	background: white;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.sdiv span:hover {
+	background: hsl(223, 100%, 50%);
+	transition: 0.3s;
+	color: white;
+	transform: translateY(-2px);
+}
+.copy {
+	padding-top: 1rem;
+	color: darkgray;
+	font-size: 14px;
+}
+
+@media screen and (orientation: portrait) {
+	.miniContainer {
+		justify-content: space-evenly;
+	}
+	.ediv {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 2rem;
+	}
+	.ediv input {
+		width: 100%;
+	}
+	.ep {
+		position: initial;
+	}
+	#btn {
+		width: 100%;
+	}
+	.imgdiv {
+		max-width: initial;
+		width: 80%;
+	}
+}
+
+@media screen and (min-height: 800px) {
+	.miniContainer {
+		justify-content: center;
+	}
+}
